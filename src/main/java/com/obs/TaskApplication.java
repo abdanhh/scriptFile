@@ -6,9 +6,12 @@ import org.slf4j.LoggerFactory;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 import java.util.StringJoiner;
 import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 public class TaskApplication {
     public static Logger logger = LoggerFactory.getLogger(TaskApplication.class);
@@ -40,8 +43,11 @@ public class TaskApplication {
 
     private static void readAndWriteFiles() throws IOException {
 
-        StringJoiner listSuccessFiles = new StringJoiner(", ");
-        StringJoiner listFailedFiles = new StringJoiner(", ");
+//        StringJoiner listSuccessFiles = new StringJoiner(", ");
+//        StringJoiner listFailedFiles = new StringJoiner(", ");
+
+        List<String> listSuccessFiles = new ArrayList<>();
+        List<String> listFailedFiles = new ArrayList<>();
 
         String path = "src/main/resources/files/";
         FileWriter fileWriter = new FileWriter("src/main/resources/Script.bat");
@@ -74,8 +80,8 @@ public class TaskApplication {
                 }
                 fileWriter.close();
                 logger.info("Success close file writer");
-                System.out.println("Success: " + listSuccessFiles);
-                System.out.println("Failed: " + listFailedFiles);
+                System.out.println("Success: " + listSuccessFiles.stream().collect(Collectors.joining(", ")));
+                System.out.println("Failed: " + listFailedFiles.stream().collect(Collectors.joining(", ")));
             } else {
                 logger.error("directory is empty");
             }
