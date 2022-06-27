@@ -8,15 +8,16 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 import java.util.StringJoiner;
+import java.util.function.Predicate;
 
 public class TaskApplication {
     public static Logger logger = LoggerFactory.getLogger(TaskApplication.class);
 
     public static void main(String[] args) {
         try {
-            if (createFile()){
-                readAndWriteFiles();
-            }
+                if (createFile()){
+                    readAndWriteFiles();
+                }
         } catch (IOException e){
             logger.info(e.getMessage());
             e.printStackTrace();
@@ -43,15 +44,16 @@ public class TaskApplication {
         StringJoiner listFailedFiles = new StringJoiner(", ");
 
         String path = "src/main/resources/files/";
+        FileWriter fileWriter = new FileWriter("src/main/resources/Script.bat");
+        Predicate<String> fileExtension = file -> file.endsWith(".sql");
+        Predicate<Integer> directoryValidation = dir -> dir > 5 &&  dir != null;
 
         File directory = new File(path);
         if (directory.isDirectory()) {
             File[] listFile = directory.listFiles();
-
-            FileWriter fileWriter = new FileWriter("src/main/resources/Script.bat");
-            if (listFile.length > 0 && listFile != null) {
+            if (directoryValidation.test(listFile.length)) {
                 for (File file : listFile) {
-                    if (file.getName().endsWith(".sql")) {
+                    if (fileExtension.test(file.getName())) {
                         Scanner scanner = new Scanner(file);
                         if (scanner.hasNextLine()) {
                             String reader = scanner.nextLine();
@@ -62,21 +64,18 @@ public class TaskApplication {
                                 listSuccessFiles.add(file.getName());
                             } else {
                                 listFailedFiles.add(file.getName());
-                                logger.info("file " + file.getName() + " is excluded because contain PRINT statement.");
+                                logger.warn("file " + file.getName() + " is excluded because contain PRINT statement.");
                             }
                         } else {
                             listFailedFiles.add(file.getName());
-                            logger.info("file " + file.getName() + " is empty");
+                            logger.warn("file " + file.getName() + " is empty");
                         }
-                    } else {
-                        listFailedFiles.add(file.getName());
-                        logger.info("file " + file.getName() + " is not .sql extension");
                     }
                 }
                 fileWriter.close();
                 logger.info("Success close file writer");
-                System.out.println("Success: "+listSuccessFiles);
-                System.out.println("Failed: "+listFailedFiles);
+                System.out.println("Success: " + listSuccessFiles);
+                System.out.println("Failed: " + listFailedFiles);
             } else {
                 logger.error("directory is empty");
             }

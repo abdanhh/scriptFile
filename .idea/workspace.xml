@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6dff358e-3560-4005-8de0-36962dca4b69" name="Default Changelist" comment="" />
+    <list default="true" id="6dff358e-3560-4005-8de0-36962dca4b69" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/obs/TaskApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/obs/TaskApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/obs/TaskApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/obs/TaskApplication.class" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +21,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
@@ -23,7 +32,9 @@
     </option>
   </component>
   <component name="ProjectId" id="2B9R0PoUZS3MLXDnl38rwGrjzNU" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
@@ -69,11 +80,22 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1656316090241</updated>
-      <workItem from="1656316093213" duration="1029000" />
+      <workItem from="1656316093213" duration="5156000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
