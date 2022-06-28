@@ -6,87 +6,69 @@ import org.slf4j.LoggerFactory;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
-import java.util.StringJoiner;
-import java.util.function.Predicate;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class TaskApplication {
-    public static Logger logger = LoggerFactory.getLogger(TaskApplication.class);
+    private static Logger logger = LoggerFactory.getLogger(TaskApplication.class);
+    private static String DIRECTORY = "src/main/resources/files/";
+    private static String PATH = "src/main/resources/Script.bat";
 
-    public static void main(String[] args) {
-        try {
-                if (createFile()){
-                    readAndWriteFiles();
-                }
-        } catch (IOException e){
-            logger.info(e.getMessage());
-            e.printStackTrace();
-        }
-
+    public static void main(String[] args) throws IOException{
+            createFile();
     }
 
-    private static boolean createFile() throws IOException {
-        boolean result;
-        File file = new File("src/main/resources/Script.bat");
+    public static File createFile() throws IOException {
+        File file = new File(PATH);
         if (file.createNewFile()){
             logger.info("Success create a file.");
-            result = true;
+            readAndWriteFile();
+            return file;
         } else {
-            logger.warn("File already exists!");
-            result = false;
+            logger.error("File Already Exists");
         }
-        return result;
+        return null;
     }
 
-    private static void readAndWriteFiles() throws IOException {
+    public static List<File> getListFiles(){
+        File directory = new File(DIRECTORY);
+        if (directory.isDirectory()){
+            File[] listFiles = directory.listFiles();
+            return Arrays.stream(listFiles).filter(file -> file.getName().endsWith(".sql")).collect(Collectors.toList());
+        } else {
+            logger.error("Directory Not Found");
+        }
+        return null;
+    }
 
-//        StringJoiner listSuccessFiles = new StringJoiner(", ");
-//        StringJoiner listFailedFiles = new StringJoiner(", ");
-
+    public static void readAndWriteFile() throws IOException {
         List<String> listSuccessFiles = new ArrayList<>();
         List<String> listFailedFiles = new ArrayList<>();
 
-        String path = "src/main/resources/files/";
         FileWriter fileWriter = new FileWriter("src/main/resources/Script.bat");
-        Predicate<String> fileExtension = file -> file.endsWith(".sql");
-        Predicate<Integer> directoryValidation = dir -> dir > 5 &&  dir != null;
 
-        File directory = new File(path);
-        if (directory.isDirectory()) {
-            File[] listFile = directory.listFiles();
-            if (directoryValidation.test(listFile.length)) {
-                for (File file : listFile) {
-                    if (fileExtension.test(file.getName())) {
-                        Scanner scanner = new Scanner(file);
-                        if (scanner.hasNextLine()) {
-                            String reader = scanner.nextLine();
-                            if (!reader.contains("System.out")) {
-                                String write = "sqlcmd -U %dbUser% -P %dbPassword% -d %dbName% -i " + "\"" + file.getName() + "\"" + "\n";
-                                fileWriter.write(write);
-                                logger.info("Success write to file. " + write);
-                                listSuccessFiles.add(file.getName());
-                            } else {
-                                listFailedFiles.add(file.getName());
-                                logger.warn("file " + file.getName() + " is excluded because contain PRINT statement.");
-                            }
-                        } else {
-                            listFailedFiles.add(file.getName());
-                            logger.warn("file " + file.getName() + " is empty");
-                        }
-                    }
+        for (File file : getListFiles()) {
+            Scanner scanner = new Scanner(file);
+            if (scanner.hasNextLine()) {
+                String reader = scanner.nextLine();
+                if (!reader.contains("System.out")) {
+                    String write = "sqlcmd -U %dbUser% -P %dbPassword% -d %dbName% -i " + "\"" + file.getName() + "\"" + "\n";
+                    fileWriter.write(write);
+                    logger.info("Success write to file. " + write);
+                    listSuccessFiles.add(file.getName());
+                } else {
+                    listFailedFiles.add(file.getName());
+                    logger.warn("file " + file.getName() + " is excluded because contain PRINT statement.");
                 }
-                fileWriter.close();
-                logger.info("Success close file writer");
-                System.out.println("Success: " + listSuccessFiles.stream().collect(Collectors.joining(", ")));
-                System.out.println("Failed: " + listFailedFiles.stream().collect(Collectors.joining(", ")));
             } else {
-                logger.error("directory is empty");
+                listFailedFiles.add(file.getName());
+                logger.warn("file " + file.getName() + " is empty");
             }
-        } else {
-            logger.error("Path not found!");
         }
+        fileWriter.close();
+        logger.info("Success close file writer");
+        System.out.println("Success: " + listSuccessFiles.stream().collect(Collectors.joining(", ")));
+        System.out.println("Failed: " + listFailedFiles.stream().collect(Collectors.joining(", ")));
+
     }
 }

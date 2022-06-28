@@ -27,3 +27,110 @@
 2022-06-27 16:25:09,140 INFO com.obs.TaskApplication [main] Success write to file. sqlcmd -U %dbUser% -P %dbPassword% -d %dbName% -i "file5.sql"
 
 2022-06-27 16:25:09,141 INFO com.obs.TaskApplication [main] Success close file writer
+2022-06-28 11:44:25,012 INFO com.obs.TaskApplication [main] Success create a file.
+2022-06-28 11:44:49,849 WARN com.obs.TaskApplication [main] File already exists!
+2022-06-28 11:46:09,207 WARN com.obs.TaskApplication [main] File already exists!
+2022-06-28 11:46:17,889 WARN com.obs.TaskApplication [main] File already exists!
+2022-06-28 11:46:17,922 WARN com.obs.TaskApplication [main] File already exists!
+2022-06-28 11:47:25,307 WARN com.obs.TaskApplication [main] File already exists!
+2022-06-28 11:47:49,045 WARN com.obs.TaskApplication [main] File already exists!
+2022-06-28 11:48:28,105 WARN com.obs.TaskApplication [main] File already exists!
+2022-06-28 13:29:49,824 WARN com.obs.TaskApplication [main] File already exists!
+2022-06-28 13:29:49,850 WARN com.obs.TaskApplication [main] File already exists!
+2022-06-28 13:30:01,763 INFO com.obs.TaskApplication [main] src/main/resources/files/
+2022-06-28 13:35:28,934 INFO com.obs.TaskApplication [main] Success create a file.
+2022-06-28 13:35:29,048 WARN com.obs.TaskApplication [main] file file1.sql is empty
+2022-06-28 13:35:29,049 WARN com.obs.TaskApplication [main] file file2.sql is excluded because contain PRINT statement.
+2022-06-28 13:35:29,051 INFO com.obs.TaskApplication [main] Success write to file. sqlcmd -U %dbUser% -P %dbPassword% -d %dbName% -i "file3.sql"
+
+2022-06-28 13:35:29,052 WARN com.obs.TaskApplication [main] file file4.sql is excluded because contain PRINT statement.
+2022-06-28 13:35:29,054 INFO com.obs.TaskApplication [main] Success write to file. sqlcmd -U %dbUser% -P %dbPassword% -d %dbName% -i "file5.sql"
+
+2022-06-28 13:35:29,054 INFO com.obs.TaskApplication [main] Success close file writer
+2022-06-28 14:00:56,082 INFO com.obs.TaskApplication [main] Success create a file.
+2022-06-28 14:00:56,195 WARN com.obs.TaskApplication [main] file file1.sql is empty
+2022-06-28 14:00:56,196 WARN com.obs.TaskApplication [main] file file2.sql is excluded because contain PRINT statement.
+2022-06-28 14:00:56,197 INFO com.obs.TaskApplication [main] Success write to file. sqlcmd -U %dbUser% -P %dbPassword% -d %dbName% -i "file3.sql"
+
+2022-06-28 14:00:56,198 WARN com.obs.TaskApplication [main] file file4.sql is excluded because contain PRINT statement.
+2022-06-28 14:00:56,199 INFO com.obs.TaskApplication [main] Success write to file. sqlcmd -U %dbUser% -P %dbPassword% -d %dbName% -i "file5.sql"
+
+2022-06-28 14:00:56,200 INFO com.obs.TaskApplication [main] Success close file writer
+2022-06-28 14:06:12,353 INFO com.obs.TaskApplication [main] Success create a file.
+2022-06-28 14:06:12,466 WARN com.obs.TaskApplication [main] file file1.sql is empty
+2022-06-28 14:06:12,468 INFO com.obs.TaskApplication [main] Success write to file. sqlcmd -U %dbUser% -P %dbPassword% -d %dbName% -i "file2.sql"
+
+2022-06-28 14:06:12,469 INFO com.obs.TaskApplication [main] Success write to file. sqlcmd -U %dbUser% -P %dbPassword% -d %dbName% -i "file3.sql"
+
+2022-06-28 14:06:12,470 INFO com.obs.TaskApplication [main] Success write to file. sqlcmd -U %dbUser% -P %dbPassword% -d %dbName% -i "file4.sql"
+
+2022-06-28 14:06:12,471 INFO com.obs.TaskApplication [main] Success write to file. sqlcmd -U %dbUser% -P %dbPassword% -d %dbName% -i "file5.sql"
+
+2022-06-28 14:06:12,472 INFO com.obs.TaskApplication [main] Success close file writer
+2022-06-28 14:07:29,934 INFO com.obs.TaskApplication [main] Success create a file.
+2022-06-28 14:07:30,074 WARN com.obs.TaskApplication [main] file file1.sql is empty
+2022-06-28 14:07:30,075 INFO com.obs.TaskApplication [main] Success write to file. sqlcmd -U %dbUser% -P %dbPassword% -d %dbName% -i "file2.sql"
+
+2022-06-28 14:07:30,076 INFO com.obs.TaskApplication [main] Success write to file. sqlcmd -U %dbUser% -P %dbPassword% -d %dbName% -i "file3.sql"
+
+2022-06-28 14:07:30,077 INFO com.obs.TaskApplication [main] Success write to file. sqlcmd -U %dbUser% -P %dbPassword% -d %dbName% -i "file4.sql"
+
+2022-06-28 14:07:30,079 INFO com.obs.TaskApplication [main] Success write to file. sqlcmd -U %dbUser% -P %dbPassword% -d %dbName% -i "file5.sql"
+
+2022-06-28 14:07:30,081 INFO com.obs.TaskApplication [main] Success close file writer
+2022-06-28 14:08:17,191 INFO com.obs.TaskApplication [main] Success create a file.
+2022-06-28 14:08:17,299 WARN com.obs.TaskApplication [main] file file1.sql is empty
+2022-06-28 14:08:17,300 WARN com.obs.TaskApplication [main] file file2.sql is excluded because contain PRINT statement.
+2022-06-28 14:08:17,301 INFO com.obs.TaskApplication [main] Success write to file. sqlcmd -U %dbUser% -P %dbPassword% -d %dbName% -i "file3.sql"
+
+2022-06-28 14:08:17,303 WARN com.obs.TaskApplication [main] file file4.sql is excluded because contain PRINT statement.
+2022-06-28 14:08:17,306 INFO com.obs.TaskApplication [main] Success write to file. sqlcmd -U %dbUser% -P %dbPassword% -d %dbName% -i "file5.sql"
+
+2022-06-28 14:08:17,307 INFO com.obs.TaskApplication [main] Success close file writer
+2022-06-28 14:33:29,398 WARN com.obs.TaskApplication [main] File already exists!
+2022-06-28 14:33:29,443 WARN com.obs.TaskApplication [main] File already exists!
+2022-06-28 14:39:46,696 INFO com.obs.TaskApplication [main] Success create a file.
+2022-06-28 14:40:48,765 INFO com.obs.TaskApplication [main] Success create a file.
+2022-06-28 14:40:48,862 WARN com.obs.TaskApplication [main] file file1.sql is empty
+2022-06-28 14:40:48,864 WARN com.obs.TaskApplication [main] file file2.sql is excluded because contain PRINT statement.
+2022-06-28 14:40:48,865 INFO com.obs.TaskApplication [main] Success write to file. sqlcmd -U %dbUser% -P %dbPassword% -d %dbName% -i "file3.sql"
+
+2022-06-28 14:40:48,866 WARN com.obs.TaskApplication [main] file file4.sql is excluded because contain PRINT statement.
+2022-06-28 14:40:48,868 INFO com.obs.TaskApplication [main] Success write to file. sqlcmd -U %dbUser% -P %dbPassword% -d %dbName% -i "file5.sql"
+
+2022-06-28 14:40:48,868 INFO com.obs.TaskApplication [main] Success close file writer
+2022-06-28 14:42:28,950 INFO com.obs.TaskApplication [main] Success create a file.
+2022-06-28 14:42:29,057 WARN com.obs.TaskApplication [main] file file1.sql is empty
+2022-06-28 14:42:29,058 WARN com.obs.TaskApplication [main] file file2.sql is excluded because contain PRINT statement.
+2022-06-28 14:42:29,059 INFO com.obs.TaskApplication [main] Success write to file. sqlcmd -U %dbUser% -P %dbPassword% -d %dbName% -i "file3.sql"
+
+2022-06-28 14:42:29,061 WARN com.obs.TaskApplication [main] file file4.sql is excluded because contain PRINT statement.
+2022-06-28 14:42:29,063 INFO com.obs.TaskApplication [main] Success write to file. sqlcmd -U %dbUser% -P %dbPassword% -d %dbName% -i "file5.sql"
+
+2022-06-28 14:42:29,064 INFO com.obs.TaskApplication [main] Success close file writer
+2022-06-28 15:02:36,577 ERROR com.obs.TaskApplication [main] File Already Exists
+2022-06-28 15:03:05,558 INFO com.obs.TaskApplication [main] Success create a file.
+2022-06-28 15:03:05,727 WARN com.obs.TaskApplication [main] file file1.sql is empty
+2022-06-28 15:03:05,728 WARN com.obs.TaskApplication [main] file file2.sql is excluded because contain PRINT statement.
+2022-06-28 15:03:05,729 INFO com.obs.TaskApplication [main] Success write to file. sqlcmd -U %dbUser% -P %dbPassword% -d %dbName% -i "file3.sql"
+
+2022-06-28 15:03:05,731 WARN com.obs.TaskApplication [main] file file4.sql is excluded because contain PRINT statement.
+2022-06-28 15:03:05,733 INFO com.obs.TaskApplication [main] Success write to file. sqlcmd -U %dbUser% -P %dbPassword% -d %dbName% -i "file5.sql"
+
+2022-06-28 15:03:05,734 INFO com.obs.TaskApplication [main] Success close file writer
+2022-06-28 15:06:20,005 ERROR com.obs.TaskApplication [main] File Already Exists
+2022-06-28 15:06:20,073 ERROR com.obs.TaskApplication [main] File Already Exists
+2022-06-28 15:07:58,323 ERROR com.obs.TaskApplication [main] File Already Exists
+2022-06-28 15:07:58,362 ERROR com.obs.TaskApplication [main] File Already Exists
+2022-06-28 15:16:22,843 ERROR com.obs.TaskApplication [main] File Already Exists
+2022-06-28 15:16:22,905 ERROR com.obs.TaskApplication [main] File Already Exists
+2022-06-28 15:18:15,723 INFO com.obs.TaskApplication [main] Success create a file.
+2022-06-28 15:18:15,738 WARN com.obs.TaskApplication [main] file file1.sql is empty
+2022-06-28 15:18:15,740 WARN com.obs.TaskApplication [main] file file2.sql is excluded because contain PRINT statement.
+2022-06-28 15:18:15,742 INFO com.obs.TaskApplication [main] Success write to file. sqlcmd -U %dbUser% -P %dbPassword% -d %dbName% -i "file3.sql"
+
+2022-06-28 15:18:15,743 WARN com.obs.TaskApplication [main] file file4.sql is excluded because contain PRINT statement.
+2022-06-28 15:18:15,744 INFO com.obs.TaskApplication [main] Success write to file. sqlcmd -U %dbUser% -P %dbPassword% -d %dbName% -i "file5.sql"
+
+2022-06-28 15:18:15,745 INFO com.obs.TaskApplication [main] Success close file writer
+2022-06-28 15:18:15,773 ERROR com.obs.TaskApplication [main] File Already Exists

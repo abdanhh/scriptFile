@@ -4,8 +4,8 @@
     <list default="true" id="6dff358e-3560-4005-8de0-36962dca4b69" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/obs/TaskApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/obs/TaskApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Script.bat" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/obs/TaskApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/obs/TaskApplication.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,9 +37,13 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.obs" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Padepokan79\Abdan\Java\OBS\task\src\main\resources" />
     </key>
@@ -56,7 +60,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.TaskApplicationTest">
     <configuration name="TaskApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.obs.TaskApplication" />
       <module name="task" />
@@ -64,9 +68,76 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TaskApplicationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="task" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.obs.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.obs" />
+      <option name="MAIN_CLASS_NAME" value="com.obs.TaskApplicationTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TaskApplicationTest.testCreateFileSuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="task" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.obs.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.obs" />
+      <option name="MAIN_CLASS_NAME" value="com.obs.TaskApplicationTest" />
+      <option name="METHOD_NAME" value="testCreateFileSuccess" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TaskApplicationTest.testGetListFilesError" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="task" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.obs.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.obs" />
+      <option name="MAIN_CLASS_NAME" value="com.obs.TaskApplicationTest" />
+      <option name="METHOD_NAME" value="testGetListFilesError" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TaskApplicationTest.testGetListFilesSucess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="task" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.obs.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.obs" />
+      <option name="MAIN_CLASS_NAME" value="com.obs.TaskApplicationTest" />
+      <option name="METHOD_NAME" value="testGetListFilesSucess" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TaskApplicationTest" />
         <item itemvalue="Application.TaskApplication" />
+        <item itemvalue="JUnit.TaskApplicationTest.testGetListFilesError" />
+        <item itemvalue="JUnit.TaskApplicationTest.testGetListFilesSucess" />
+        <item itemvalue="JUnit.TaskApplicationTest.testCreateFileSuccess" />
       </list>
     </recent_temporary>
   </component>
@@ -80,7 +151,10 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1656316090241</updated>
-      <workItem from="1656316093213" duration="5594000" />
+      <workItem from="1656316093213" duration="5746000" />
+      <workItem from="1656325985005" duration="249000" />
+      <workItem from="1656380546529" duration="18276000" />
+      <workItem from="1656410457487" duration="8000" />
     </task>
     <servers />
   </component>
@@ -92,7 +166,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
